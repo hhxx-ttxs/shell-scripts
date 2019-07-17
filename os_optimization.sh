@@ -43,8 +43,8 @@ osOptimization() {
   
   ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
   
-  /usr/sbin/ntpdate time.aliyun.com
-  echo "*/5 * * * * /usr/sbin/ntpdate time.aliyun.com > /dev/null 2>&1" >> /var/spool/cron/root
+  /usr/sbin/ntpdate time1.aliyun.com
+  echo "*/5 * * * * /usr/sbin/ntpdate time1.aliyun.com > /dev/null 2>&1" >> /var/spool/cron/root
   
   
   
