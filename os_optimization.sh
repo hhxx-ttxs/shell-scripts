@@ -3,8 +3,9 @@
 #this script is only for CentOS 7.x
 
 osCheck(){
-  os_version=`uname -r|awk -F '.' '{print $6}'`
-  if [ ${os_version} != "el7" ];then 
+  #os_version=`uname -r|awk -F '.' '{print $6}'`
+  os_version=$(awk -F '[ .]' '{print $4}' /etc/redhat-release)
+  if [ ${os_version} != "7" ];then 
     echo "this script is only for Centos-7 Operating System !"
     exit 1
   fi
